@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.getElementById("mainForm");
 
-    const url = 'http://localhost:3000/';
+    const url = '/';
 
     const ajaxSend = async (data, operation) => {
         const fetchResp = await fetch(url + operation, {
