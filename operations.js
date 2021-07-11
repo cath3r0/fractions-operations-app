@@ -21,8 +21,8 @@ export function addFractions(fr1, fr2) {
         let gcd = findGCD(num1 + num2, denom1);
         return { "numerator": (num1 + num2)/gcd, "denominator": denom1/gcd };
     }
-    let gcd = findGCD(num, lcm);
     let num = (num1 * (lcm / denom1)) + (num2 * (lcm / denom2))
+    let gcd = findGCD(num, lcm);
     return { "numerator": num/gcd, "denominator": lcm/gcd };
 }
 
