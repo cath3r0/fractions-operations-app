@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const myData = {
             "fractions": [
                 {
-                    "numerator": formData.get("num1"),
-                    "denominator": formData.get("denom1")
+                    "numerator": parseInt(formData.get("num1")),
+                    "denominator": parseInt(formData.get("denom1"))
                 },
                 {
-                    "numerator": formData.get("num2"),
-                    "denominator": formData.get("denom2")
+                    "numerator": parseInt(formData.get("num2")),
+                    "denominator": parseInt(formData.get("denom2"))
                 }
             ]
         };
