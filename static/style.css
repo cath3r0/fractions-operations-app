@@ -1,0 +1,3 @@
+div.col, div.col-auto {
+    min-width: 50px;
+}
