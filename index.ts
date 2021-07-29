@@ -1,6 +1,6 @@
 import express, { json } from "express";
-import path, { dirname } from "path";
-import * as operationsTs from "./operations.js";
+import path from "path";
+import * as operations from "./operations.js";
 
 
 const __frontend_dirname = path.join(path.resolve(), 'static')
@@ -19,28 +19,28 @@ app.get('/', function (req, res) {
 
 app.post('/addition', (req, res) => {
     var data = req.body.fractions;
-    let result = operationsTs.addFractions(data[0], data[1]);
+    let result = operations.addFractions(data[0], data[1]);
     res.status(200);
     res.send(result);
 });
 
 app.post('/multiplication', (req, res) => {
     var data = req.body.fractions;
-    let result = operationsTs.multiplyFractions(data[0], data[1]);
+    let result = operations.multiplyFractions(data[0], data[1]);
     res.status(200);
     res.send(result);
 });
 
 app.post('/division', (req, res) => {
     var data = req.body.fractions;
-    let result = operationsTs.divideFractions(data[0], data[1]);
+    let result = operations.divideFractions(data[0], data[1]);
     res.status(200);
     res.send(result);
 });
 
 app.post('/subtraction', (req, res) => {
     var data = req.body.fractions;
-    let result = operationsTs.subtractFractions(data[0], data[1]);
+    let result = operations.subtractFractions(data[0], data[1]);
     res.status(200);
     res.send(result);
 });

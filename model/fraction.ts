@@ -16,4 +16,8 @@ export class Fraction {
         let gcd = findGCD(this.numerator, this.denominator);
         return new Fraction(this.numerator / gcd, this.denominator / gcd);
     }
+
+    toString = (): string => {
+        return `${this.numerator}/${this.denominator}`;
+    }
 }
