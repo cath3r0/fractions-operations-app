@@ -12,7 +12,7 @@ app.use(json());
 
 app.use(express.static(__frontend_dirname));
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__frontend_dirname, '/index.html'));
 });
 
@@ -38,9 +38,9 @@ app.post('/division', (req, res) => {
     res.send(result);
 });
 
-app.post('/substraction', (req, res) => {
+app.post('/subtraction', (req, res) => {
     var data = req.body.fractions;
-    let result = operationsTs.substractFractions(data[0], data[1]);
+    let result = operationsTs.subtractFractions(data[0], data[1]);
     res.status(200);
     res.send(result);
 });

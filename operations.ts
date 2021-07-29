@@ -31,7 +31,7 @@ export function divideFractions(fr1: Fraction, fr2: Fraction): Fraction {
     return new Fraction(fr1.numerator * fr2.denominator, fr1.denominator * fr2.numerator).simplifyFraction();
 }
 
-export function substractFractions(fr1: Fraction, fr2: Fraction) {
+export function subtractFractions(fr1: Fraction, fr2: Fraction) {
     let lcm = findLCM(fr1.denominator, fr2.denominator);
     if (fr1.denominator === fr2.denominator) {
         return new Fraction(fr1.numerator - fr2.numerator, fr1.denominator).simplifyFraction();

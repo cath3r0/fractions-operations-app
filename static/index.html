@@ -36,7 +36,10 @@
                         </div>
                         <div class="line"></div>
                         <div class="form-floating mt-2">
-                            <input type="number" class="form-control text-center" name="denom1" value="1" required>
+                            <input type="number" class="form-control text-center needs-validation" name="denom1" value="1" required>
+                            <div class="invalid-feedback">
+                                Denominator cannot have the value zero!
+                              </div>
                         </div>
                     </div>
                     <div class="col-auto">
@@ -44,7 +47,7 @@
                             <select id="operation" name="operation" class="form-select">
                                 <option selected value="addition">+</option>
                                 <option value="multiplication">x</option>
-                                <option value="substraction">-</option>
+                                <option value="subtraction">-</option>
                                 <option value="division">/</option>
                             </select>
                         </div>
@@ -52,11 +55,17 @@
                     <div class="col">
                         <div class="col">
                             <div class="form-floating mb-2">
-                                <input type="number" class="form-control text-center" name="num2" value="1" required>
+                                <input type="number" class="form-control text-center" id="num2" name="num2" value="1" required>
+                                <div class="invalid-feedback">
+                                    Divisor cannot equal zero!
+                                </div>
                             </div>
                             <div class="line"></div>
                             <div class="form-floating mt-2">
-                                <input type="number" class="form-control text-center" name="denom2" value="1" required>
+                                <input type="number" class="form-control text-center needs-validation" name="denom2" value="1" required>
+                                <div class="invalid-feedback">
+                                    Denominator cannot have the value zero!
+                                  </div>
                             </div>
                         </div>
                     </div>
