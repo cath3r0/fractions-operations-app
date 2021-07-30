@@ -1,4 +1,4 @@
-# fractions-operations-app
+# fractions-operations-app [![Build Status](https://travis-ci.com/cath3r0/fractions-operations-app.svg?branch=main)](https://travis-ci.com/cath3r0/fractions-operations-app)
 
 ## What is the main functionality?
 
