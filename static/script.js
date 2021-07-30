@@ -76,14 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         };
         const operation = formData.get("operation");
-
+        const output = document.querySelector("output h1");
         ajaxSend(myData, operation)
             .then((response) => {
                 let res = JSON.parse(response);
-                let num = document.getElementById("resNum");
-                num.value = res.numerator;
-                let denom = document.getElementById("resDenom");
-                denom.value = res.denominator;
+                if (res.numerator < 0) {
+                    output.innerHTML = `-<sup>${res.numerator * -1}</sup>/<sub>${res.denominator}</sub>`;
+                } else if (res.denominator < 0) {
+                    output.innerHTML = `-<sup>${res.numerator}</sup>/<sub>${res.denominator * -1}</sub>`;
+                } else {
+                    output.innerHTML = `<sup>${res.numerator}</sup>/<sub>${res.denominator}</sub>`;
+                }
             })
             .catch((err) => {
                 console.error(err);
